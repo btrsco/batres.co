@@ -12,17 +12,12 @@ class DatabaseSeeder extends Seeder
      *
      * @var array|array[]
      */
-    public array $seeders = [
-        'universal' => [
-            Universal\UserSeeder::class,
-        ],
-        'production' => [
-            Production\UserSeeder::class,
-        ],
-        'development' => [
-            Development\UserSeeder::class,
-        ],
-    ];
+    public array $seeders
+        = [
+            'universal'   => [],
+            'production'  => [],
+            'development' => [],
+        ];
 
     /**
      * Seed the application's database.
