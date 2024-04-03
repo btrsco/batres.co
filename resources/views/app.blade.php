@@ -107,6 +107,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,400;0,700;1,700&display=swap" rel="stylesheet">
 
+        @production
+            <script defer data-domain="batres.co" src="https://a.serve.ooo/js/plausible.js"></script>
+        @endproduction
+
         @vite(['resources/scripts/app.js', "resources/views/pages/{$page['component']}.vue"])
         @inertiaHead
     </head>
