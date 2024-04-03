@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
+use App\Http\Controllers\CallbackController;
+use App\Http\Controllers\OAuthController;
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,23 +16,15 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return inertia('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::get('/', [PageController::class, 'index'])
+    ->name('index');
 
-Route::get('/dashboard', function () {
-    return inertia('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/oauth/spotify/{key}', [OAuthController::class, 'spotify'])
+    ->name('oauth.spotify');
+Route::get('/oauth/dribbble/{key}', [OAuthController::class, 'dribbble'])
+    ->name('oauth.dribbble');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-Route::group([], base_path('routes/web/auth.php'));
+Route::get('/callback/spotify', [CallbackController::class, 'spotify'])
+    ->name('callback.spotify');
+Route::get('/callback/dribbble', [CallbackController::class, 'dribbble'])
+    ->name('callback.dribbble');

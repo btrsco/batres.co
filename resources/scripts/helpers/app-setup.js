@@ -5,13 +5,14 @@ import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 import PortalVue from 'portal-vue';
 import { createApp, createSSRApp, h } from 'vue';
-import { ZiggyVue } from 'ZiggyVue';
+import Vue3Marquee from "vue3-marquee";
 
 /* Setup inertia app and helpers.
  * - - - - - - - - - - - - - - - - - - */
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
+dayjs.tz.setDefault('MST');
 
 export default function ({ el, App, props, plugin, page }) {
   /* Initialize vue app.
@@ -25,19 +26,14 @@ export default function ({ el, App, props, plugin, page }) {
    * - - - - - - - - - - - - - - - - - - */
 
   vueApp.mixin({
-    methods: { __, dayjs },
+    methods: { dayjs },
   });
 
   /* Instantiate global plugins.
    * - - - - - - - - - - - - - - - - - - */
 
-  vueApp.use(ZiggyVue, page !== undefined ? {
-      ...page.props.ziggy,
-      url: new URL(page.props.ziggy.location),
-    } : Ziggy,
-  );
-
   vueApp.use(PortalVue);
+  vueApp.use(Vue3Marquee);
   vueApp.use(Axios);
   vueApp.use(Components);
   vueApp.use(plugin);

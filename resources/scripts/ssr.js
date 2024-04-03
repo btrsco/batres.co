@@ -1,3 +1,5 @@
+import '@/scss/app.scss';
+
 import { renderToString } from '@vue/server-renderer';
 import { createInertiaApp } from '@inertiajs/vue3';
 import createServer from '@inertiajs/vue3/server';

@@ -20,7 +20,7 @@ export default defineConfig( {
                 'resources/scss/app.scss',
             ],
             ssr:     'resources/scripts/ssr.js',
-            refresh: true,
+            refresh: false,
         } ),
         vue( {
             template: {

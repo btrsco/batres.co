@@ -1,21 +1,5 @@
 <?php
 
-if ( ! function_exists('is_enum')) {
-    /**
-     * Check if a value is an enum.
-     *
-     * @param mixed $value
-     *
-     * @return bool
-     */
-    function is_enum(mixed $value): bool
-    {
-        return $value instanceof \UnitEnum;
-    }
-}
-
-
-
 if ( ! function_exists('inertia')) {
     /**
      * Inertia helper.
@@ -57,19 +41,16 @@ if ( ! function_exists('inertia_location')) {
 
 
 
-if ( ! function_exists('cache_key')) {
+if ( ! function_exists('to_array')) {
     /**
-     * Generate a cache key
+     * Convert an object to an array.
      *
-     * @param string $key
-     * @param array  $params
+     * @param object|null $object $object
      *
-     * @return string
+     * @return array
      */
-    function cache_key(string $key, array $params = []): string
+    function to_array(object $object = null): ?array
     {
-        return !empty($params)
-            ? "{$key}:" . implode('.', $params)
-            : $key;
+        return json_decode(json_encode($object), true);
     }
 }

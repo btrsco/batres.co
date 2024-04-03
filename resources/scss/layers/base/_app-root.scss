@@ -4,3 +4,7 @@
 html, body, #app {
     @apply w-full min-h-full;
 }
+
+#app {
+    @apply p-3 sm:p-6;
+}
