@@ -47,7 +47,7 @@
                                 <PhotoshopIcon />
                                 <IllustratorIcon />
                             </IconStack>
-                            and and building
+                            and building
                             <IconStack>
                                 <LaravelIcon />
                                 <VueJsIcon />
