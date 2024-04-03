@@ -31,4 +31,18 @@ return [
         ],
     ],
 
+    'spotify' => [
+        'client_id' => env('SPOTIFY_CLIENT_ID'),
+        'client_secret' => env('SPOTIFY_CLIENT_SECRET'),
+        'redirect' => env('SPOTIFY_REDIRECT_URI'),
+        'url_key' => env('SPOTIFY_URL_KEY'),
+    ],
+
+    'dribbble' => [
+        'client_id' => env('DRIBBBLE_CLIENT_ID'),
+        'client_secret' => env('DRIBBBLE_CLIENT_SECRET'),
+        'redirect' => env('DRIBBBLE_REDIRECT_URI'),
+        'url_key' => env('DRIBBBLE_URL_KEY'),
+    ],
+
 ];

@@ -1,0 +1,39 @@
+/* Base: Fonts
+ * - - - - - - - - - - - - - - */
+
+// FONT: Huben
+@font-face {
+    font-family: 'Huben';
+    src: url('/fonts/huben-regular-webfont.woff2') format('woff2'),
+    url('/fonts/huben-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// FONT: Neuething Sans
+@font-face {
+    font-family: 'Neuething Sans';
+    src: url('/fonts/neuethingsans-regular-webfont.woff2') format('woff2'),
+    url('/fonts/neuethingsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuething Sans';
+    src: url('/fonts/neuethingsans-semibold-webfont.woff2') format('woff2'),
+    url('/fonts/neuethingsans-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+// FONT: Neuething Sans Expanded
+@font-face {
+    font-family: 'Neuething Sans Expanded';
+    src: url('/fonts/neuethingsans-semibold-expanded-webfont.woff2') format('woff2'),
+    url('/fonts/neuethingsans-semibold-expanded-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
