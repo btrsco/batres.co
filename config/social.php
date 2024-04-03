@@ -2,13 +2,13 @@
 
 return [
     'twitter' => [
-        'username' => 'username',
-        'at' => '@username',
-        'url' => 'https://twitter.com/username',
+        'username' => 'btrsco',
+        'at' => '@btrsco',
+        'url' => 'https://twitter.com/btrsco',
     ],
     'instagram' => [
-        'username' => 'username',
-        'at' => '@username',
-        'url' => 'https://instagram.com/username',
+        'username' => 'btrsco',
+        'at' => '@btrsco',
+        'url' => 'https://instagram.com/btrsco',
     ],
 ];
