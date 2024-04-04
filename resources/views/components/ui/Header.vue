@@ -55,7 +55,7 @@ export default {
     components: { ExplicitIcon, ShortLogo, MetalLogo, MusicNote, Logo, Container },
     data() {
         return {
-            currentTime:        this.dayjs().format( 'h:mm A' ),
+            currentTime:        this.dayjs().tz( 'America/Phoenix', true ).format( 'h:mm A' ),
             currentTimeTimeout: null,
             nowPlaying:         this.$page.props.nowPlaying,
             nowPlayingTimeout:  null,
