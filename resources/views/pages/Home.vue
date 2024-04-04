@@ -6,7 +6,7 @@
                 :strength="4"
                 type="depth_inv">
                 <div class="max-w-7xl mx-auto w-full">
-                    <MetalLogo />
+                    <MetalLogo class="opacity-75" />
                 </div>
             </KinesisElement>
 
@@ -59,14 +59,7 @@
                             Moving fast, while ensuring the highest level of quality,
                             detail and performance.
                         </p>
-                        <p class="sm:hidden">
-                            Available for work,
-                            <span
-                                class="underline cursor-pointer"
-                                @click="scrollToBottom"
-                            >let's work together</span>.
-                        </p>
-                        <p class="hidden sm:block">
+                        <p>
                             Available for work
                             <IconStack>
                                 <AvailableIcon />

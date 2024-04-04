@@ -47,7 +47,7 @@
                     <feGaussianBlur stdDeviation="1.5"/>
                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
                     <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
-                    <feBlend mode="liighten" in2="effect4_innerShadow_4_505" result="effect5_innerShadow_4_505"/>
+                    <feBlend mode="lighten" in2="effect4_innerShadow_4_505" result="effect5_innerShadow_4_505"/>
                 </filter>
                 <linearGradient id="paint0_linear_4_505" x1="20" y1="8" x2="68" y2="56" gradientUnits="userSpaceOnUse">
                     <stop stop-color="#1A416B"/>

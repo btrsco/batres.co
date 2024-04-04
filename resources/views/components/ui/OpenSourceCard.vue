@@ -8,7 +8,7 @@
                     <a
                         v-if="showDownloads"
                         :href="packagistUrl"
-                        class="flex sm:hidden p-1.5 gap-1 justify-center items-center rounded-lg w-max bg-blue-500 text-white text-xs font-semibold"
+                        class="flex sm:hidden p-1.5 gap-1 justify-center items-center rounded-lg w-max bg-blue-500 text-white text-xs font-semibold shadow-md sm:hover:shadow-lg transition-all duration-200 ease-in-out"
                         target="_blank">
                         <span
                             v-if="!fetching"
@@ -24,7 +24,7 @@
                     </a>
                     <a
                         :href="link"
-                        class="flex sm:hidden px-4 py-1.5 gap-2 justify-center items-center rounded-lg w-max bg-zinc-800 text-white text-sm font-semibold"
+                        class="flex sm:hidden px-4 py-1.5 gap-2 justify-center items-center rounded-lg w-max bg-zinc-800 text-white text-sm font-semibold shadow-md sm:hover:shadow-lg transition-all duration-200 ease-in-out"
                         target="_blank">
                         <span>View Code</span>
                         <GithubIcon />
@@ -41,7 +41,7 @@
             <a
                 v-if="showDownloads"
                 :href="packagistUrl"
-                class="hidden sm:flex items-center gap-1 p-1.5 rounded-lg w-max bg-blue-500 text-white text-xs font-semibold"
+                class="hidden sm:flex items-center gap-1 p-1.5 rounded-lg w-max bg-blue-500 text-white text-xs font-semibold shadow-md sm:hover:shadow-lg transition-all duration-200 ease-in-out"
                 target="_blank">
                 <span
                     v-if="!fetching"
@@ -57,7 +57,7 @@
             </a>
             <a
                 :href="link"
-                class="hidden sm:flex p-1.5 rounded-lg w-max bg-zinc-800 text-white"
+                class="hidden sm:flex p-1.5 rounded-lg w-max bg-zinc-800 text-white shadow-md sm:hover:shadow-lg transition-all duration-200 ease-in-out"
                 target="_blank">
                 <GithubIcon />
             </a>

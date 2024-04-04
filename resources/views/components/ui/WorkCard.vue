@@ -27,7 +27,7 @@
 
             <button class="hidden sm:inline-flex px-4 py-2 rounded-lg text-sm gap-2 w-max font-semibold transition-all duration-300 ease-in-out"
                     type="button"
-                    :class="[ctaClasses, { 'cursor-not-allowed': !link, 'shadow-md hover:shadow-lg': link }]"
+                    :class="[ctaClasses, { 'cursor-not-allowed': !link, 'shadow-md sm:hover:shadow-lg': link }]"
                     @click="openLink">
                 {{ cta }}
                 <ClockWaitIcon

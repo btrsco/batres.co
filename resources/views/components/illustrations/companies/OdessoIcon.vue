@@ -146,7 +146,7 @@
                         type="matrix"
                         values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0" />
                     <feBlend
-                        mode="liighten"
+                        mode="lighten"
                         in2="effect4_innerShadow_4_934"
                         result="effect5_innerShadow_4_934" />
                 </filter>
