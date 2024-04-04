@@ -2,7 +2,7 @@
 
 return [
     'title' => [
-        'default'   => 'Product Designer &amp; Developer',
+        'default'   => 'Product Designer &amp; Engineer',
         'separator' => '&mdash;',
     ],
 

@@ -80,6 +80,34 @@
             media="(prefers-color-scheme: dark)"
         />
 
+        <link
+            head-key="favicon-32"
+            rel="icon"
+            href="/favicon-32.png"
+            sizes="32x32"
+        />
+
+        <link
+            head-key="favicon-128"
+            rel="icon"
+            href="/favicon-128.png"
+            sizes="128x128"
+        />
+
+        <link
+            head-key="favicon-180"
+            rel="icon"
+            href="/favicon-180.png"
+            sizes="180x180"
+        />
+
+        <link
+            head-key="favicon-192"
+            rel="icon"
+            href="/favicon-192.png"
+            sizes="192x192"
+        />
+
         <slot />
     </inertia-head>
 </template>

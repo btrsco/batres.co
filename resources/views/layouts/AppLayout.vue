@@ -1,5 +1,5 @@
 <template>
-    <PageHead title="Product Designer &amp; Developer"></PageHead>
+    <PageHead :title="title || $page.props.app.meta.title.default"></PageHead>
     <GrainOverlay />
 
     <Animate
@@ -26,6 +26,12 @@ import PageHead from '@/views/components/utils/PageHead';
 
 export default {
     name:       'AppLayout',
+    props:      {
+        title: {
+            type: String,
+            required: false,
+        },
+    },
     computed:   {
         Navigation() {
             return Navigation
