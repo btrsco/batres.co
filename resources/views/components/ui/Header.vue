@@ -55,10 +55,11 @@ export default {
     components: { ExplicitIcon, ShortLogo, MetalLogo, MusicNote, Logo, Container },
     data() {
         return {
-            currentTime:        this.dayjs().tz( 'America/Phoenix', true ).format( 'h:mm A' ),
+            currentTime:        'XX:XX XX',
             currentTimeTimeout: null,
             nowPlaying:         this.$page.props.nowPlaying,
             nowPlayingTimeout:  null,
+            timezone:           'America/Phoenix',
             musicNote: {
                 timeout: null,
                 x:       0,
@@ -70,7 +71,14 @@ export default {
     emits: ['mounted'],
     computed: {
         weekDay() {
-            return this.dayjs().tz( 'America/Phoenix', true ).format( 'ddd' ).toUpperCase();
+            const currentDateInTimeZone = new Date().toLocaleString('en-US', { timeZone: this.timezone });
+            const currentDate = new Date(currentDateInTimeZone);
+            const getAbbreviatedWeekday = (date) => {
+                const weekdays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+                return weekdays[date.getDay()];
+            };
+
+            return getAbbreviatedWeekday(currentDate);
         },
         nowPlayingName() {
             return this.nowPlaying.is_explicit
@@ -87,10 +95,9 @@ export default {
     },
     methods:  {
         initializeLiveTime() {
+            this.updateCurrentTime();
 
-            this.currentTimeTimeout = setInterval( () => {
-                this.currentTime = this.dayjs().tz( 'America/Phoenix', true ).format( 'h:mm A' );
-            }, 500 );
+            this.currentTimeTimeout = setInterval( () => this.updateCurrentTime(), 500 );
         },
         initializeNowPlayingPolling() {
             this.nowPlayingTimeout = setInterval( () => {
@@ -129,6 +136,19 @@ export default {
                 iconX: x,
                 iconY: y,
             };
+        },
+        updateCurrentTime() {
+            const currentDate = new Date();
+            const currentTimeInTimezone = currentDate.toLocaleString('en-US', {
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true,
+                timeZone: this.timezone,
+            });
+
+            // Convert currentTimeInTimezone to "05:55 AM" format
+            const [hour, minute, ampm] = currentTimeInTimezone.split(/:| /);
+            this.currentTime = `${ hour.padStart( 2, '0' ) }:${ minute } ${ ampm }`;
         },
         iconParticleEmitter() {
             const { headerX, headerY } = this.headerCoords();
