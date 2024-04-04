@@ -5,7 +5,9 @@
                 class="absolute z-[-1] md:-top-24 left-0 right-0 flex justify-center items-start w-full h-auto animate__animated animate__fadeIn animate__slow"
                 :strength="4"
                 type="depth_inv">
-                <MetalLogo class="max-w-7xl mx-auto" />
+                <div class="max-w-7xl mx-auto w-full">
+                    <MetalLogo />
+                </div>
             </KinesisElement>
 
             <Animate
@@ -57,7 +59,14 @@
                             Moving fast, while ensuring the highest level of quality,
                             detail and performance.
                         </p>
-                        <p>
+                        <p class="sm:hidden">
+                            Available for work,
+                            <span
+                                class="underline cursor-pointer"
+                                @click="scrollToBottom"
+                            >let's work together</span>.
+                        </p>
+                        <p class="hidden sm:block">
                             Available for work
                             <IconStack>
                                 <AvailableIcon />
@@ -68,9 +77,8 @@
                             ,
                             <span
                                 class="underline cursor-pointer"
-                                @click="scrollToBottom">
-                                lets work together
-                            </span>.
+                                @click="scrollToBottom"
+                            >let's work together</span>.
                         </p>
                     </Animate>
                 </section>
@@ -344,7 +352,7 @@ export default {
                     description: 'Laravel Nova 4 package to add random password generation field.',
                     link:        'https://github.com/oooholdings/nova-password-generator',
                     icon:        'PasswordGeneratorIcon',
-                    showDownloads: false,
+                    showDownloads: true,
                 },
                 {
                     vendor:      'xandco',
@@ -352,7 +360,7 @@ export default {
                     description: 'PHP package to parse, validate and group domain names.',
                     link:        'https://github.com/xandco/domainparser',
                     icon:        'DomainParserIcon',
-                    showDownloads: false,
+                    showDownloads: true,
                 },
                 {
                     vendor:      'xandco',
@@ -360,7 +368,7 @@ export default {
                     description: 'PHP package to parse and format raw root and whois data.',
                     link:        'https://github.com/xandco/whoisparser',
                     icon:        'WhoisParserIcon',
-                    showDownloads: false,
+                    showDownloads: true,
                 },
                 {
                     vendor:      'xandco',
@@ -368,7 +376,7 @@ export default {
                     description: 'PHP package to easily query whois servers over an HTTP proxy.',
                     link:        'https://github.com/xandco/whoisproxy',
                     icon:        'WhoisProxyIcon',
-                    showDownloads: false,
+                    showDownloads: true,
                 },
             ],
         };

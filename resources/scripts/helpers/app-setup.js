@@ -12,7 +12,7 @@ import Vue3Marquee from "vue3-marquee";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-dayjs.tz.setDefault('MST');
+dayjs.tz.setDefault('America/Phoenix');
 
 export default function ({ el, App, props, plugin, page }) {
   /* Initialize vue app.

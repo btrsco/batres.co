@@ -8,7 +8,7 @@
                     <a
                         v-if="showDownloads"
                         :href="packagistUrl"
-                        class="flex sm:hidden p-1.5 gap-1 justify-center items-center rounded-lg w-max bg-zinc-200 text-zinc-500 text-xs font-semibold"
+                        class="flex sm:hidden p-1.5 gap-1 justify-center items-center rounded-lg w-max bg-blue-500 text-white text-xs font-semibold"
                         target="_blank">
                         <span
                             v-if="!fetching"
@@ -41,7 +41,7 @@
             <a
                 v-if="showDownloads"
                 :href="packagistUrl"
-                class="hidden sm:flex items-center gap-1 p-1.5 rounded-lg w-max bg-zinc-200 text-zinc-500 text-xs font-semibold"
+                class="hidden sm:flex items-center gap-1 p-1.5 rounded-lg w-max bg-blue-500 text-white text-xs font-semibold"
                 target="_blank">
                 <span
                     v-if="!fetching"

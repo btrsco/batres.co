@@ -1,5 +1,5 @@
 <template>
-    <div class="relative hidden sm:inline-flex justify-center items-center overflow-visible w-12 h-12 top-3 group"
+    <div class="relative hidden sm:inline-flex justify-center items-center overflow-visible w-12 h-12 top-3 group select-none"
          @mouseenter="hover = true"
          @mouseleave="hover = false"
          @click="shiftIcons">

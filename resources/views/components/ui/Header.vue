@@ -48,7 +48,7 @@ import MusicNote from '@/views/components/icons/MusicNote';
 import Logo from '@/views/components/Logo';
 import MetalLogo from '@/views/components/MetalLogo';
 import ShortLogo from '@/views/components/ShortLogo';
-import { useResizeObserver, useScroll } from '@vueuse/core';
+import { useResizeObserver } from '@vueuse/core';
 
 export default {
     name:       'Header',
@@ -70,7 +70,7 @@ export default {
     emits: ['mounted'],
     computed: {
         weekDay() {
-            return this.dayjs().format( 'ddd' ).toUpperCase();
+            return this.dayjs().tz( 'America/Phoenix', true ).format( 'ddd' ).toUpperCase();
         },
         nowPlayingName() {
             return this.nowPlaying.is_explicit
@@ -87,8 +87,9 @@ export default {
     },
     methods:  {
         initializeLiveTime() {
+
             this.currentTimeTimeout = setInterval( () => {
-                this.currentTime = this.dayjs().format( 'h:mm A' );
+                this.currentTime = this.dayjs().tz( 'America/Phoenix', true ).format( 'h:mm A' );
             }, 500 );
         },
         initializeNowPlayingPolling() {
