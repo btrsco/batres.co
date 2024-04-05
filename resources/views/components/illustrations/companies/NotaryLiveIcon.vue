@@ -52,7 +52,7 @@
                     <feGaussianBlur stdDeviation="1"/>
                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
                     <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
-                    <feBlend mode="liighten" in2="effect4_innerShadow_4_963" result="effect5_innerShadow_4_963"/>
+                    <feBlend mode="lighten" in2="effect4_innerShadow_4_963" result="effect5_innerShadow_4_963"/>
                 </filter>
                 <filter id="filter1_dd_4_963" x="16" y="14" width="56" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                     <feFlood flood-opacity="0" result="BackgroundImageFix"/>
