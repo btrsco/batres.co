@@ -13,6 +13,6 @@ return [
 
     'theme' => [
         'light' => 'white',
-        'dark'  => 'white',
+        'dark'  => 'black',
     ],
 ];
