@@ -1,7 +1,7 @@
 <template>
     <img
         :src="image"
-        class="flex-shrink-0 aspect-shot max-w-64 w-full sm:max-w-[21rem] sm:w-auto rounded-lg overflow-hidden border border-zinc-300"/>
+        class="flex-shrink-0 aspect-shot max-w-64 w-full sm:max-w-[21rem] sm:w-auto rounded-lg overflow-hidden border border-zinc-300 dark:border-zinc-800"/>
 </template>
 
 <script>

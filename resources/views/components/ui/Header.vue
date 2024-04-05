@@ -1,19 +1,19 @@
 <template>
     <Container
         as="header"
-        class="sticky top-4 z-20 flex items-center gap-2 sm:gap-4 px-3 sm:px-6 py-2 rounded-xl border border-white bg-white/85 backdrop-blur-lg">
-        <div class="text-black sm:w-full order-2 sm:order-1">
+        class="sticky top-4 z-20 flex items-center gap-2 sm:gap-4 px-3 sm:px-6 py-2 rounded-xl border border-white bg-white/85 backdrop-blur-lg dark:bg-black/50 dark:border-zinc-900">
+        <div class="text-black dark:text-white sm:w-full order-2 sm:order-1">
             <Logo class="hidden sm:block" />
             <ShortLogo class="sm:hidden" />
         </div>
-        <div class="w-12 h-12 flex-shrink-0 order-1 sm:order-2 rounded-full border-2 border-white bg-black object-cover overflow-hidden">
+        <div class="w-12 h-12 flex-shrink-0 order-1 sm:order-2 rounded-full border-2 border-white dark:border-black bg-black object-cover overflow-hidden">
             <img src="/images/avatar.jpg"
                  alt="Miguel Batres' Photo">
         </div>
-        <div class="text-black flex flex-col items-end w-full text-xs font-mono order-3">
+        <div class="text-black dark:text-white flex flex-col items-end w-full text-xs font-mono order-3">
             <div class="flex gap-2 italic">
                 <strong>{{ weekDay }}</strong>
-                <span class="text-black/25">{{ currentTime }}</span>
+                <span class="text-black/25 dark:text-white/50">{{ currentTime }}</span>
             </div>
             <a
                 :href="nowPlaying.url || '#now-playing'"
@@ -26,9 +26,9 @@
                     :duration="8"
                     :delay="1">
                     <strong>{{ nowPlaying.artist }}</strong>
-                    <span class="text-black/25 mx-2">&mdash;</span>
+                    <span class="text-black/25 dark:text-white/50 mx-2">&mdash;</span>
                     <span
-                        class="text-black/25 transition-all duration-300 ease-in-out"
+                        class="text-black/25 dark:text-white/50 transition-all duration-300 ease-in-out"
                         :class="[{ 'blur-[1.5px] mr-1': nowPlaying.is_explicit, 'mr-8': !nowPlaying.is_explicit }]">
                         {{ nowPlayingName }}
                     </span>
@@ -146,7 +146,6 @@ export default {
                 timeZone: this.timezone,
             });
 
-            // Convert currentTimeInTimezone to "05:55 AM" format
             const [hour, minute, ampm] = currentTimeInTimezone.split(/:| /);
             this.currentTime = `${ hour.padStart( 2, '0' ) }:${ minute } ${ ampm }`;
         },
