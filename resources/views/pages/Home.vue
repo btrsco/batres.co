@@ -5,7 +5,7 @@
                 class="absolute z-[-1] md:-top-24 left-0 right-0 flex justify-center items-start w-full h-auto animate__animated animate__fadeIn animate__slow"
                 :strength="4"
                 type="depth_inv">
-                <div class="max-w-7xl mx-auto w-full">
+                <div class="flex justify-center items-start max-w-7xl mx-auto w-full">
                     <MetalLogo class="opacity-75" />
                 </div>
             </KinesisElement>
