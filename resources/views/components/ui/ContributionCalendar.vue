@@ -3,7 +3,7 @@
         <div
             v-for="(contribution, index) in contributions"
             class="border rounded w-3 h-3"
-            :class="[{ 'bg-zinc-100 border-zinc-200': contribution === 0, 'bg-green-200 border-green-300': contribution === 1, 'bg-green-400 border-green-500': contribution === 2, 'bg-green-500 border-green-600': contribution === 3 }]">
+            :class="[contributionClass(contribution)]">
 
         </div>
     </div>
@@ -43,6 +43,16 @@ export default {
             const diff = now - startOfYear;
             const oneDay = 1000 * 60 * 60 * 24;
             return Math.floor(diff / oneDay);
+        }
+    },
+    methods: {
+        contributionClass(contribution) {
+            return {
+                'bg-zinc-100 border-zinc-200 dark:bg-zinc-800 dark:border-zinc-700': contribution === 0,
+                'bg-green-200 border-green-300 dark:bg-green-900 dark:border-green-700': contribution === 1,
+                'bg-green-400 border-green-500 dark:bg-green-600 dark:border-green-400': contribution === 2,
+                'bg-green-500 border-green-600 dark:bg-green-400 dark:border-green-300': contribution === 3
+            }
         }
     }
 };

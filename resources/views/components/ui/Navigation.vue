@@ -1,6 +1,6 @@
 <template>
     <footer class="fixed left-0 right-0 bottom-0 p-3 sm:p-4 pt-0 z-20 pointer-events-none">
-        <nav class="w-full sm:w-max mx-auto flex justify-between sm:justify-center items-center gap-2 sm:gap-4 px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl border border-white bg-white/85 backdrop-blur-lg pointer-events-auto">
+        <nav class="w-full sm:w-max mx-auto flex justify-between sm:justify-center items-center gap-2 sm:gap-4 px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl border border-white bg-white/85 backdrop-blur-lg pointer-events-auto dark:bg-black/50 dark:border-zinc-900">
             <button
                 v-for="item in navItems"
                 :key="item.section"
@@ -57,10 +57,8 @@ export default {
         },
         buttonClasses(section) {
             return {
-                'text-white': this.currentSection === section,
-                'text-black/25': this.currentSection !== section,
-                'bg-black': this.currentSection === section,
-                'bg-transparent': this.currentSection !== section,
+                'bg-black text-white dark:bg-white dark:text-black': this.currentSection === section,
+                'bg-transparent text-black/25 dark:text-white/50': this.currentSection !== section,
             };
         },
         updateScroll() {

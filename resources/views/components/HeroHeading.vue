@@ -2,7 +2,7 @@
     <h1
         class="relative w-full h-auto"
         style="padding-top: 25%;">
-        <div class="absolute inset-0">
+        <div class="absolute inset-0 text-black dark:text-white">
             <svg
                 viewBox="0 0 720 182"
                 fill="currentColor"

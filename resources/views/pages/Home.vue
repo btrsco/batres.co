@@ -35,7 +35,7 @@
                         easing="easeOutExpo"
                         once />
                     <Animate
-                        class="flex flex-col gap-3 sm:gap-6 text-2xl sm:text-[2rem] sm:leading-[3rem] tracking-condensed"
+                        class="flex flex-col gap-3 sm:gap-6 text-2xl sm:text-[2rem] sm:leading-[3rem] tracking-condensed text-zinc-700 dark:text-zinc-400"
                         :translateY="[128, 0]"
                         :opacity="[0, 1]"
                         :duration="2000"
@@ -69,7 +69,7 @@
                             </IconStack>
                             ,
                             <span
-                                class="underline cursor-pointer"
+                                class="underline cursor-pointer text-black dark:text-white"
                                 @click="scrollToBottom"
                             >let's work together</span>.
                         </p>
@@ -147,8 +147,8 @@
                             subtitle="@btrsco"
                             cta="Resume"
                             link="https://read.cv/btrsco"
-                            icon-bg="bg-black"
-                            icon-color="text-white">
+                            icon-bg="bg-black dark:bg-white"
+                            icon-color="text-white dark:text-black">
                             <template #icon>
                                 <ReadCvIcon />
                             </template>
@@ -172,8 +172,8 @@
                             subtitle="@btrsco"
                             cta="Follow"
                             link="https://github.com/btrsco"
-                            icon-bg="bg-zinc-800"
-                            icon-color="text-white">
+                            icon-bg="bg-zinc-800 dark:bg-white"
+                            icon-color="text-white dark:text-zinc-800">
                             <template #icon>
                                 <GithubIcon />
                             </template>
@@ -315,7 +315,7 @@ export default {
                     media:       [
                         '/images/component-guide-preview-01@2x.jpg',
                         '/images/component-guide-preview-02@2x.jpg' ],
-                    ctaClasses:  'bg-zinc-200 text-zinc-500',
+                    ctaClasses:  'bg-zinc-200 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400',
                 },
                 {
                     title:       'Sticker Bomb Co.',
@@ -335,7 +335,7 @@ export default {
                     icon:        'VscoDownloadIcon',
                     link:        'https://chromewebstore.google.com/detail/vsco-media-downloader/looapkhpinpjaioiljphfmbnhbbgfcpl',
                     media:       [ '/images/vsco-download-preview-01@2x.jpg' ],
-                    ctaClasses:  'bg-zinc-800 text-white',
+                    ctaClasses:  'bg-zinc-800 text-white dark:bg-white dark:text-zinc-800',
                 },
             ],
             openSource: [

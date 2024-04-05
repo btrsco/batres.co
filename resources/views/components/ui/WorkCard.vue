@@ -1,6 +1,6 @@
 <template>
     <Card as="li">
-        <div class="relative z-10 flex flex-col gap-5 p-3 sm:p-6 sm:w-80 border-r border-zinc-200 bg-white sm:bg-white/85 sm:backdrop-blur-lg">
+        <div class="relative z-10 flex flex-col gap-5 p-3 sm:p-6 sm:w-80 border-r border-zinc-200 dark:border-zinc-800 bg-white sm:bg-white/85 dark:bg-black dark:sm:bg-black/85 sm:backdrop-blur-lg">
             <div class="flex justify-between items-center w-full">
                 <slot name="icon" />
                 <button class="inline-flex sm:hidden px-4 py-2 rounded-lg text-sm gap-2 w-max font-semibold"
@@ -18,12 +18,12 @@
             </div>
 
             <div>
-                <h3 class="text-lg font-sans-expanded tracking-condensed">{{ title }}</h3>
-                <p class="text-sm text-zinc-400 tracking-tight">{{ subtitle }}</p>
+                <h3 class="text-lg font-sans-expanded tracking-condensed text-black dark:text-white">{{ title }}</h3>
+                <p class="text-sm text-zinc-400 dark:text-zinc-600 tracking-tight">{{ subtitle }}</p>
             </div>
 
 
-            <p class="text-sm text-zinc-600 tracking-tight sm:h-[3.75rem]">{{ description }}</p>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400 tracking-tight sm:h-[3.75rem]">{{ description }}</p>
 
             <button class="hidden sm:inline-flex px-4 py-2 rounded-lg text-sm gap-2 w-max font-semibold transition-all duration-300 ease-in-out"
                     type="button"
@@ -41,17 +41,17 @@
 
         <div class="relative sm:absolute sm:inset-0">
             <div
-                class="flex justify-center items-center absolute right-0 top-0 bottom-0 z-10 p-3 bg-gradient-to-r from-transparent to-zinc-100 transform transition-all duration-300 ease-in-out"
+                class="flex justify-center items-center absolute right-0 top-0 bottom-0 z-10 p-3 bg-gradient-to-r from-transparent to-zinc-100 dark:to-zinc-900 transform transition-all duration-300 ease-in-out"
                 :class="[canScrollMedia ? 'translate-x-0' : 'translate-x-full']"
                 @click="scrollRight">
-                <div class="rounded-full p-1 bg-white/85 backdrop-blur-xl border border-white">
-                    <ChevronRightIcon class="w-6 h-6 text-zinc-400" />
+                <div class="rounded-full p-1 bg-white/85 dark:bg-black/85 backdrop-blur-xl border border-white dark:border-black">
+                    <ChevronRightIcon class="w-6 h-6 text-zinc-400 dark:text-white" />
                 </div>
             </div>
 
             <div
                 ref="media"
-                class="sm:absolute sm:inset-0 flex gap-4 bg-zinc-100 p-3 sm:p-6 sm:pl-[21.5rem] overflow-y-scroll">
+                class="sm:absolute sm:inset-0 flex gap-4 bg-zinc-100 dark:bg-zinc-900 p-3 sm:p-6 sm:pl-[21.5rem] overflow-y-scroll">
                 <slot name="media" />
             </div>
         </div>

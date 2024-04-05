@@ -11,8 +11,8 @@
                 </div>
 
                 <div class="text-sm/[1.125rem]">
-                    <div class="text-zinc-600 font-semibold">{{ title }}</div>
-                    <div class="text-zinc-400">{{ subtitle }}</div>
+                    <div class="text-zinc-600 dark:text-zinc-400 font-semibold">{{ title }}</div>
+                    <div class="text-zinc-400 dark:text-zinc-600">{{ subtitle }}</div>
                 </div>
 
                 <a
