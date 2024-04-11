@@ -2,6 +2,7 @@
 
 namespace App\DataTransferObjects;
 
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 class CurrentPlaybackDto
@@ -37,18 +38,24 @@ class CurrentPlaybackDto
 
     public static function getRandom(): self
     {
-        $fallback    = Storage::get('fallback-songs.json');
-        $randomSongs = collect(json_decode($fallback, true));
-        $randomSong  = $randomSongs->random();
+        if (Cache::has('random-playback')) {
+            $randomSong = Cache::get('random-playback');
+        } else {
+            $fallback    = Storage::get('fallback-songs.json');
+            $randomSongs = collect(json_decode($fallback, true));
+            $randomSong  = $randomSongs->random();
+
+            Cache::put('random-playback', $randomSong, now()->addMinutes(5));
+        }
 
         return new self(
             $randomSong['name'],
             $randomSong['artist'],
             $randomSong['album'],
-            null,
+            $randomSong['url'] ?? null,
             0,
             false,
-            false
+            $randomSong['is_explicit'] ?? false
         );
     }
 
