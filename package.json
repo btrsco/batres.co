@@ -36,6 +36,7 @@
         "vue-kinesis": "^2.0.5",
         "vue-tsc": "^2.0.7",
         "vue3-marquee": "^4.2.0",
-        "vue3-scroll-spy": "^1.0.8"
+        "vue3-scroll-spy": "^1.0.8",
+        "vue3-simple-icons": "^13.2.0"
     }
 }
