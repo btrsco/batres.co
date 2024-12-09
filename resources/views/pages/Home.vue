@@ -52,6 +52,9 @@
                             and building
                             <IconStack>
                                 <LaravelIcon />
+                                <TypeScriptIcon />
+                                <!--<JavaScriptIcon />-->
+                                <TailwindCssIcon />
                                 <VueJsIcon />
                             </IconStack>
                             great products
@@ -220,7 +223,10 @@ import OdessoIcon from '@/views/components/illustrations/companies/OdessoIcon';
 import FigmaIcon from '@/views/components/illustrations/designStack/FigmaIcon';
 import IllustratorIcon from '@/views/components/illustrations/designStack/IllustratorIcon';
 import PhotoshopIcon from '@/views/components/illustrations/designStack/PhotoshopIcon';
+import JavaScriptIcon from '@/views/components/illustrations/devStack/JavaScriptIcon';
 import LaravelIcon from '@/views/components/illustrations/devStack/LaravelIcon';
+import TailwindCssIcon from '@/views/components/illustrations/devStack/TailwindCssIcon';
+import TypeScriptIcon from '@/views/components/illustrations/devStack/TypeScriptIcon';
 import VueJsIcon from '@/views/components/illustrations/devStack/VueJsIcon';
 import DomainParserIcon from '@/views/components/illustrations/openSource/DomainParserIcon';
 import PasswordGeneratorIcon from '@/views/components/illustrations/openSource/PasswordGeneratorIcon';
@@ -229,6 +235,7 @@ import WhoisProxyIcon from '@/views/components/illustrations/openSource/WhoisPro
 import ComponentGuideIcon from '@/views/components/illustrations/projects/ComponentGuideIcon';
 import StickerBombIcon from '@/views/components/illustrations/projects/StickerBombIcon';
 import VscoDownloadIcon from '@/views/components/illustrations/projects/VscoDownloadIcon';
+import WooshLinkIcon from '@/views/components/illustrations/projects/WooshLinkIcon'
 import MetalLogo from '@/views/components/MetalLogo';
 import TitledSection from '@/views/components/TitledSection';
 import BackgroundLogo from '@/views/components/ui/BackgroundLogo';
@@ -262,6 +269,9 @@ export default {
         }
     },
     components: {
+        TailwindCssIcon,
+        TypeScriptIcon,
+        JavaScriptIcon,
         Animate,
         MetalLogo,
         OdessoIcon,
@@ -292,6 +302,7 @@ export default {
         StickerBombIcon,
         VscoDownloadIcon,
         ComponentGuideIcon,
+        WooshLinkIcon,
         Card,
         TitledSection,
         HeroHeading,
@@ -306,16 +317,14 @@ export default {
         return {
             work:       [
                 {
-                    title:       'Component.Guide',
+                    title:       'Woosh.link',
                     subtitle:    'Product Design & Web Development',
-                    description: 'Growing visual glossary of widely used components in the UI Design world.',
-                    cta:         'Coming Soon',
-                    icon:        'ComponentGuideIcon',
-                    link:        null,
-                    media:       [
-                        '/images/component-guide-preview-01@2x.jpg',
-                        '/images/component-guide-preview-02@2x.jpg' ],
-                    ctaClasses:  'bg-zinc-200 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400',
+                    description: 'Effortlessly share everything you create, curate, and sell across all social platforms with your own link page.',
+                    cta:         'Claim your page',
+                    icon:        'WooshLinkIcon',
+                    link:        'https://woosh.link/?utm_sorce=batres_co&utm_medium=work_item',
+                    media:       [ '/images/woosh-link-preview-01@2x.jpg' ],
+                    ctaClasses:  'bg-zinc-800 text-white dark:bg-white dark:text-zinc-800',
                 },
                 {
                     title:       'Sticker Bomb Co.',
