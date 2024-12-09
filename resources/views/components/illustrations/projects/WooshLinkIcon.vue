@@ -154,6 +154,6 @@
 
 <script>
 export default {
-    name: 'ComponentGuideIcon',
+    name: 'WooshLinkIcon',
 }
 </script>
