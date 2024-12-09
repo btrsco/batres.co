@@ -57,9 +57,9 @@
             </a>
             <a
                 :href="link"
-                class="hidden sm:flex p-1.5 rounded-lg w-max bg-zinc-800 text-white dark:text-black dark:bg-white shadow-md sm:hover:shadow-lg transition-all duration-200 ease-in-out"
+                class="hidden sm:flex p-2 rounded-lg w-max bg-zinc-800 text-white dark:text-black dark:bg-white shadow-md sm:hover:shadow-lg transition-all duration-200 ease-in-out"
                 target="_blank">
-                <GithubIcon />
+                <GitHubIcon class="size-5" />
             </a>
         </div>
     </Card>
@@ -68,12 +68,12 @@
 <script>
 import Card from '@/views/components/Card';
 import DownloadIcon from '@/views/components/icons/DownloadIcon';
-import GithubIcon from '@/views/components/icons/GithubIcon';
 import LoadingIcon from '@/views/components/icons/LoadingIcon';
+import { GitHubIcon } from 'vue3-simple-icons';
 
 export default {
     name: 'OpenSourceCard',
-    components: { LoadingIcon, DownloadIcon, Card, GithubIcon },
+    components: { LoadingIcon, DownloadIcon, Card, GitHubIcon },
     props: {
         vendor: {
             type: String,

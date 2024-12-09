@@ -52,6 +52,9 @@
                             and building
                             <IconStack>
                                 <LaravelIcon />
+                                <TypeScriptIcon />
+                                <!--<JavaScriptIcon />-->
+                                <TailwindCssIcon />
                                 <VueJsIcon />
                             </IconStack>
                             great products
@@ -150,20 +153,20 @@
                             icon-bg="bg-black dark:bg-white"
                             icon-color="text-white dark:text-black">
                             <template #icon>
-                                <ReadCvIcon />
+                                <ReadDotcvIcon class="size-5" />
                             </template>
                         </SocialCard>
                         <SocialEmailCard />
                         <SocialCard
                             class="order-2 md:order-3 md:aspect-square col-span-1"
-                            title="X / Twitter"
-                            subtitle="@btrsco"
+                            title="Bluesky"
+                            subtitle="@btrs.co"
                             cta="Follow"
-                            link="https://x.com/btrsco"
+                            link="https://bsky.app/profile/btrs.co"
                             icon-bg="bg-sky-500"
                             icon-color="text-white">
                             <template #icon>
-                                <TwitterIcon />
+                                <BlueskyIcon class="size-5" />
                             </template>
                         </SocialCard>
                         <SocialCard
@@ -175,7 +178,7 @@
                             icon-bg="bg-zinc-800 dark:bg-white"
                             icon-color="text-white dark:text-zinc-800">
                             <template #icon>
-                                <GithubIcon />
+                                <GitHubIcon class="size-5" />
                             </template>
                             <template #content>
                                 <ContributionCalendar />
@@ -190,7 +193,7 @@
                             icon-bg="bg-pink-500"
                             icon-color="text-white">
                             <template #icon>
-                                <DribbbleIcon />
+                                <DribbbleIcon class="size-5" />
                             </template>
                             <template #content>
                                 <RecentShotsGrid />
@@ -209,10 +212,6 @@ import Animate from '@/views/components/Animate';
 import Card from '@/views/components/Card';
 import Container from '@/views/components/Container';
 import HeroHeading from '@/views/components/HeroHeading';
-import DribbbleIcon from '@/views/components/icons/DribbbleIcon';
-import GithubIcon from '@/views/components/icons/GithubIcon';
-import ReadCvIcon from '@/views/components/icons/ReadCvIcon';
-import TwitterIcon from '@/views/components/icons/TwitterIcon';
 import AvailableIcon from '@/views/components/illustrations/AvailableIcon';
 import FewIcon from '@/views/components/illustrations/companies/FewIcon';
 import NotaryLiveIcon from '@/views/components/illustrations/companies/NotaryLiveIcon';
@@ -220,7 +219,10 @@ import OdessoIcon from '@/views/components/illustrations/companies/OdessoIcon';
 import FigmaIcon from '@/views/components/illustrations/designStack/FigmaIcon';
 import IllustratorIcon from '@/views/components/illustrations/designStack/IllustratorIcon';
 import PhotoshopIcon from '@/views/components/illustrations/designStack/PhotoshopIcon';
+import JavaScriptIcon from '@/views/components/illustrations/devStack/JavaScriptIcon';
 import LaravelIcon from '@/views/components/illustrations/devStack/LaravelIcon';
+import TailwindCssIcon from '@/views/components/illustrations/devStack/TailwindCssIcon';
+import TypeScriptIcon from '@/views/components/illustrations/devStack/TypeScriptIcon';
 import VueJsIcon from '@/views/components/illustrations/devStack/VueJsIcon';
 import DomainParserIcon from '@/views/components/illustrations/openSource/DomainParserIcon';
 import PasswordGeneratorIcon from '@/views/components/illustrations/openSource/PasswordGeneratorIcon';
@@ -229,6 +231,7 @@ import WhoisProxyIcon from '@/views/components/illustrations/openSource/WhoisPro
 import ComponentGuideIcon from '@/views/components/illustrations/projects/ComponentGuideIcon';
 import StickerBombIcon from '@/views/components/illustrations/projects/StickerBombIcon';
 import VscoDownloadIcon from '@/views/components/illustrations/projects/VscoDownloadIcon';
+import WooshLinkIcon from '@/views/components/illustrations/projects/WooshLinkIcon'
 import MetalLogo from '@/views/components/MetalLogo';
 import TitledSection from '@/views/components/TitledSection';
 import BackgroundLogo from '@/views/components/ui/BackgroundLogo';
@@ -244,6 +247,7 @@ import SocialEmailCard from '@/views/components/ui/SocialEmailCard';
 import WorkCard from '@/views/components/ui/WorkCard';
 import AppLayout from '@/views/layouts/AppLayout';
 import { KinesisContainer, KinesisElement } from 'vue-kinesis';
+import { BlueskyIcon, DribbbleIcon, GitHubIcon, ReadDotcvIcon } from 'vue3-simple-icons'
 
 export default {
     name:       'Home',
@@ -262,6 +266,9 @@ export default {
         }
     },
     components: {
+        TailwindCssIcon,
+        TypeScriptIcon,
+        JavaScriptIcon,
         Animate,
         MetalLogo,
         OdessoIcon,
@@ -277,21 +284,21 @@ export default {
         RecentShotsGrid,
         DribbbleIcon,
         ContributionCalendar,
-        TwitterIcon,
         SocialEmailCard,
-        ReadCvIcon,
+        ReadDotcvIcon,
         SocialCard,
         Shot,
         WhoisProxyIcon,
         WhoisParserIcon,
         DomainParserIcon,
         OpenSourceCard,
-        GithubIcon,
+        GitHubIcon,
         PasswordGeneratorIcon,
         WorkCard,
         StickerBombIcon,
         VscoDownloadIcon,
         ComponentGuideIcon,
+        WooshLinkIcon,
         Card,
         TitledSection,
         HeroHeading,
@@ -301,21 +308,20 @@ export default {
         AppLayout,
         KinesisContainer,
         KinesisElement,
+        BlueskyIcon
     },
     data() {
         return {
             work:       [
                 {
-                    title:       'Component.Guide',
+                    title:       'Woosh.link',
                     subtitle:    'Product Design & Web Development',
-                    description: 'Growing visual glossary of widely used components in the UI Design world.',
-                    cta:         'Coming Soon',
-                    icon:        'ComponentGuideIcon',
-                    link:        null,
-                    media:       [
-                        '/images/component-guide-preview-01@2x.jpg',
-                        '/images/component-guide-preview-02@2x.jpg' ],
-                    ctaClasses:  'bg-zinc-200 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400',
+                    description: 'Effortlessly share everything you create, curate, and sell across all social platforms with your own link page.',
+                    cta:         'Claim your page',
+                    icon:        'WooshLinkIcon',
+                    link:        'https://woosh.link/?utm_sorce=batres_co&utm_medium=work_item',
+                    media:       [ '/images/woosh-link-preview-01@2x.jpg' ],
+                    ctaClasses:  'bg-zinc-800 text-white dark:bg-white dark:text-zinc-800',
                 },
                 {
                     title:       'Sticker Bomb Co.',
@@ -345,30 +351,6 @@ export default {
                     description: 'Laravel Nova 4 package to add random password generation field.',
                     link:        'https://github.com/oooholdings/nova-password-generator',
                     icon:        'PasswordGeneratorIcon',
-                    showDownloads: true,
-                },
-                {
-                    vendor:      'xandco',
-                    package:     'domainparser',
-                    description: 'PHP package to parse, validate and group domain names.',
-                    link:        'https://github.com/xandco/domainparser',
-                    icon:        'DomainParserIcon',
-                    showDownloads: true,
-                },
-                {
-                    vendor:      'xandco',
-                    package:     'whoisparser',
-                    description: 'PHP package to parse and format raw root and whois data.',
-                    link:        'https://github.com/xandco/whoisparser',
-                    icon:        'WhoisParserIcon',
-                    showDownloads: true,
-                },
-                {
-                    vendor:      'xandco',
-                    package:     'whoisproxy',
-                    description: 'PHP package to easily query whois servers over an HTTP proxy.',
-                    link:        'https://github.com/xandco/whoisproxy',
-                    icon:        'WhoisProxyIcon',
                     showDownloads: true,
                 },
             ],

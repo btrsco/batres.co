@@ -11,11 +11,11 @@
                     <rect x="20" y="8" width="48" height="48" rx="12" fill="url(#paint0_linear_4_508)"/>
                     <rect x="20" y="8" width="48" height="48" rx="12" fill="white" fill-opacity="0.85" style="mix-blend-mode:color-dodge"/>
                     <g filter="url(#filter1_dd_4_508)">
-                        <path d="M52.4 20H58L44 44.15L30 20H35.53H40.71L44 25.6L47.22 20H52.4Z" fill="#41B883"/>
-                        <path d="M58.8652 20.5015L59.7356 19H58H52.4H47.22H46.6415L46.3531 19.5015L43.9907 23.61L41.5722 19.4935L41.2823 19H40.71H35.53H30H28.2644L29.1349 20.5015L43.1349 44.6516L44 46.1439L44.8652 44.6516L58.8652 20.5015Z" stroke="white" stroke-width="2"/>
+                        <path d="M52.2957 21.15H57.8261L44 45L30.174 21.15H35.6352H40.7509L44 26.6805L47.18 21.15H52.2957Z" fill="#41B883"/>
+                        <path d="M58.6912 21.6516L59.5617 20.15H57.8261H52.2957H47.18H46.6015L46.3131 20.6516L43.9907 24.6905L41.6131 20.6435L41.3232 20.15H40.7509H35.6352H30.174H28.4384L29.3088 21.6516L43.1349 45.5015L44 46.9939L44.8652 45.5015L58.6912 21.6516Z" stroke="white" stroke-width="2"/>
                     </g>
-                    <path d="M30 20L44 44.15L58 20H52.4L44 34.49L35.53 20H30Z" fill="#63C58A"/>
-                    <path d="M35.53 20.0001L44 34.5601L52.4 20.0001H47.22L44 25.6001L40.71 20.0001H35.53Z" fill="#253546"/>
+                    <path d="M30.174 21.15L44 45L57.8261 21.15H52.2957L44 35.46L35.6352 21.15H30.174Z" fill="#63C58A"/>
+                    <path d="M35.6352 21.1502L44 35.5293L52.2956 21.1502H47.18L44 26.6806L40.7509 21.1502H35.6352Z" fill="#253546"/>
                 </g>
                 <rect x="21" y="9" width="46" height="46" rx="11" stroke="url(#paint1_linear_4_508)" stroke-width="2"/>
             </g>
@@ -56,7 +56,7 @@
                     <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
                     <feBlend mode="lighten" in2="effect4_innerShadow_4_508" result="effect5_innerShadow_4_508"/>
                 </filter>
-                <filter id="filter1_dd_4_508" x="21.5288" y="17" width="44.9424" height="40.1378" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <filter id="filter1_dd_4_508" x="21.7028" y="18.15" width="44.5945" height="39.8378" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                     <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                     <feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect1_dropShadow_4_508"/>
@@ -95,7 +95,3 @@ export default {
     name: 'VueJsIcon',
 };
 </script>
-
-<style scoped>
-
-</style>
