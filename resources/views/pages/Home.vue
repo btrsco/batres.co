@@ -53,7 +53,6 @@
                             <IconStack>
                                 <LaravelIcon />
                                 <TypeScriptIcon />
-                                <!--<JavaScriptIcon />-->
                                 <TailwindCssIcon />
                                 <VueJsIcon />
                             </IconStack>
@@ -221,6 +220,7 @@ import IllustratorIcon from '@/views/components/illustrations/designStack/Illust
 import PhotoshopIcon from '@/views/components/illustrations/designStack/PhotoshopIcon';
 import JavaScriptIcon from '@/views/components/illustrations/devStack/JavaScriptIcon';
 import LaravelIcon from '@/views/components/illustrations/devStack/LaravelIcon';
+import PhpIcon from '@/views/components/illustrations/devStack/PhpIcon'
 import TailwindCssIcon from '@/views/components/illustrations/devStack/TailwindCssIcon';
 import TypeScriptIcon from '@/views/components/illustrations/devStack/TypeScriptIcon';
 import VueJsIcon from '@/views/components/illustrations/devStack/VueJsIcon';
@@ -266,6 +266,7 @@ export default {
         }
     },
     components: {
+        PhpIcon,
         TailwindCssIcon,
         TypeScriptIcon,
         JavaScriptIcon,
@@ -317,7 +318,7 @@ export default {
                     title:       'Woosh.link',
                     subtitle:    'Product Design & Web Development',
                     description: 'Effortlessly share everything you create, curate, and sell across all social platforms with your own link page.',
-                    cta:         'Claim your page',
+                    cta:         'Claim Your Page',
                     icon:        'WooshLinkIcon',
                     link:        'https://woosh.link/?utm_sorce=batres_co&utm_medium=work_item',
                     media:       [ '/images/woosh-link-preview-01@2x.jpg' ],
