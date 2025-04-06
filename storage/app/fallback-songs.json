@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Lonely Day",
+        "artist": "System of a Down",
+        "album": "Hypnotize",
+        "url": "https://open.spotify.com/track/1VNWaY3uNfoeWqb5U8x2QX",
+        "is_explicit": false
+    },
+    {
+        "name": "Mis Tres Animales",
+        "artist": "Los Tucanes de Tijuana",
+        "album": "14 Tucanazos Bien Pesados",
+        "url": "https://open.spotify.com/track/50urwe1JN84PxSKsJ8yY2p",
+        "is_explicit": false
+    },
+    {
+        "name": "The Humpty Dance",
+        "artist": "Digital Underground",
+        "album": "Sex Packets",
+        "url": "https://open.spotify.com/track/0YEC3pNS0uIKvZb5u4lgsu",
+        "is_explicit": false
+    },
+    {
+        "name": "Welcome To The Party",
+        "artist": "Pop Smoke",
+        "album": "Meet The Woo",
+        "url": "https://open.spotify.com/track/0fIffclhgJC5h8AdMMVvkp",
+        "is_explicit": true
+    },
+    {
+        "name": "Put Your Head On My Shoulder",
+        "artist": "Paul Anka",
+        "album": "Put Your Head On My Shoulder",
+        "url": "https://open.spotify.com/track/2DpJ9T2RVRanZcYFHKOAfA",
+        "is_explicit": false
+    },
+    {
+        "name": "505",
+        "artist": "Arctic Monkeys",
+        "album": "Favourite Worst Nightmare",
+        "url": "https://open.spotify.com/track/58ge6dfP91o9oXMzq3XkIS",
+        "is_explicit": false
+    },
+    {
+        "name": "Loner",
+        "artist": "Kali Uchis",
+        "album": "Por Vida",
+        "url": "https://open.spotify.com/track/6m6R6O2BOZDCNymhJ45spI",
+        "is_explicit": false
+    },
+    {
+        "name": "Movie Screen",
+        "artist": "Tommy Newport",
+        "album": "Movie Screen - A COLORS SHOW",
+        "url": "https://open.spotify.com/track/7buf1ojS69j3lESVbXB4gV",
+        "is_explicit": false
+    },
+    {
+        "name": "Little Molly",
+        "artist": "Tommy Cash",
+        "album": "Little Molly",
+        "url": "https://open.spotify.com/track/0JlHO8rVUfTqPUgVcwmELw",
+        "is_explicit": false
+    },
+    {
+        "name": "Dark Light",
+        "artist": "Night Lovell",
+        "album": "Concept Vague",
+        "url": "https://open.spotify.com/track/2y57H6nA3vic5t8awwaS69",
+        "is_explicit": true
+    },
+    {
+        "name": "Antarctica",
+        "artist": "$uicideboy$",
+        "album": "Antarctica",
+        "url": "https://open.spotify.com/track/5UGAXwbA17bUC0K9uquGY2",
+        "is_explicit": true
+    }
+]
