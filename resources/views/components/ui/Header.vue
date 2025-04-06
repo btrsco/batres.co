@@ -28,9 +28,8 @@
                     <strong>{{ nowPlaying.artist }}</strong>
                     <span class="text-black/25 dark:text-white/50 mx-2">&mdash;</span>
                     <span
-                        class="text-black/25 dark:text-white/50 transition-all duration-300 ease-in-out"
-                        :class="[{ 'blur-[1.5px] mr-1': nowPlaying.is_explicit, 'mr-8': !nowPlaying.is_explicit }]">
-                        {{ nowPlayingName }}
+                        class="text-black/25 dark:text-white/50 transition-all duration-300 ease-in-out mr-8">
+                        {{ nowPlaying.name }}
                     </span>
                     <ExplicitIcon
                         v-if="nowPlaying.is_explicit"
@@ -79,11 +78,6 @@ export default {
             };
 
             return getAbbreviatedWeekday(currentDate);
-        },
-        nowPlayingName() {
-            return this.nowPlaying.is_explicit
-                ? this.nowPlaying.name.replace( /[aeiou]/gi, '*' )
-                : this.nowPlaying.name;
         },
     },
     watch: {
