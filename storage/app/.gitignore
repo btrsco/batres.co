@@ -1,3 +1,5 @@
 *
 !public/
 !.gitignore
+!fallback-shots.json
+!fallback-songs.json
