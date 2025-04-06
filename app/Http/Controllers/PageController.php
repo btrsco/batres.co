@@ -12,6 +12,7 @@ class PageController extends Controller
         return inertia('Home', [
             'nowPlaying' => GetCurrentPlayback::run()->toArray(),
             'recentShots' => GetRecentShots::run(),
+            'availableForWork' => env('AVAILABLE_FOR_WORK', false),
         ]);
     }
 }

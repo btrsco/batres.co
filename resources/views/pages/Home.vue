@@ -61,7 +61,7 @@
                             Moving fast, while ensuring the highest level of quality,
                             detail and performance.
                         </p>
-                        <p>
+                        <p v-if="availableForWork">
                             Available for work
                             <IconStack>
                                 <AvailableIcon />
@@ -313,6 +313,7 @@ export default {
     },
     data() {
         return {
+            availableForWork: this.$page.props.availableForWork,
             work:       [
                 {
                     title:       'Woosh.link',
