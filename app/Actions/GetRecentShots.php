@@ -2,15 +2,11 @@
 
 namespace App\Actions;
 
-use App\DataTransferObjects\CurrentPlaybackDto;
 use App\Wrappers\Dribbble\Dribbble;
 use Carbon\Carbon;
 use Exception;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Lorisleiva\Actions\Concerns\AsAction;
-use SpotifyWebAPI\SpotifyWebAPI;
-use SpotifyWebAPI\SpotifyWebAPIException;
 
 class GetRecentShots
 {
@@ -31,19 +27,24 @@ class GetRecentShots
             }
         }
 
-        $accessData       = json_decode(Storage::get('tokens/dribbble.json'), true);
-        $api = new Dribbble(
-            clientId: config('services.dribbble.client_id'),
-            clientSecret: config('services.dribbble.client_secret'),
-            redirectUri: config('services.dribbble.redirect'),
-        );
+        $accessData = json_decode(Storage::get('tokens/dribbble.json'), true);
 
-        $api->setAccessToken($accessData['access_token']);
+        if (empty($accessData['access_token'])) {
+            return json_decode(Storage::get('fallback-shots.json'), true);
+        } else {
+            $api = new Dribbble(
+                clientId    : config('services.dribbble.client_id'),
+                clientSecret: config('services.dribbble.client_secret'),
+                redirectUri : config('services.dribbble.redirect'),
+            );
 
-        $response = $api->getShots();
+            $api->setAccessToken($accessData['access_token']);
+
+            $response = $api->getShots();
+        }
 
         $data = [
-            'shots' => $response,
+            'shots'        => $response,
             'last_updated' => Carbon::now()->toDateTimeString(),
         ];
 
